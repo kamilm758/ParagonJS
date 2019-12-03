@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 5</title>
+    <link rel="Stylesheet" href="style.css"/>
+</head>
+<body>
+<header>
+    <h1>PARAGON 30-03-15/004</h1>
+</header>
+<main>
+    <table>
+        <thead>
+        <tr>
+            <th>LP</th>
+            <th>NAZWA</th>
+            <th>ILOŚĆ</th>
+            <th>CENA</th>
+            <th>SUMA</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tbody id="parent">
+
+        </tbody>
+
+
+        <tr>
+            <td colspan="4" class="razem">RAZEM</td>
+            <td class="razem" id="razem">0,00 zł</td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+<form>
+    <table>
+        <thead>
+        <tr><td colspan="2">
+            <h2>Nowa pozycja</h2>
+        </td></tr>
+        </thead>
+        <tr>
+            <td>Nazwa:</td>
+            <td><input id="nazwa_produktu"></td>
+        </tr>
+        <tr>
+            <td>Ilość:</td>
+            <td><input id="ilosc_produktu" type="number" min="0" oninput="validity.valid||(value='');"></td>
+        </tr>
+        <tr>
+            <td>Cena:</td>
+            <td><input id="cena_produktu" oninput="validity.valid||(value='');"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right">
+                <input type="button" value="dodaj" onclick="dodaj_produkt()">
+            </td>
+        </tr>
+    </table>
+</form>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
